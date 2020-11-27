@@ -1,0 +1,8 @@
+package com.zipcodewilmington.froilansfarm;
+
+import org.junit.Test;
+
+public class WednesdayTest {
+    @Test
+    public void WednesdayTest(){}
+}
