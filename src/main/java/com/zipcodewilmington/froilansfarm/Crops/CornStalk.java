@@ -1,7 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Crops;
 
-public class CornStalk extends Crop {
-    public void yield() {
+import com.zipcodewilmington.froilansfarm.Foods.EarOfCorn;
 
+public class CornStalk extends Crop {
+    public EarOfCorn yield() {
+        EarOfCorn earOfCorn = new EarOfCorn();
+        return earOfCorn;
     }
 }
