@@ -5,7 +5,11 @@ import com.zipcodewilmington.froilansfarm.BooFarmStorage.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.BooFarmStorage.Stable;
 import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 import com.zipcodewilmington.froilansfarm.Crops.Field;
+import com.zipcodewilmington.froilansfarm.Foods.EarOfCorn;
+import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 import com.zipcodewilmington.froilansfarm.People.Farmer;
 import com.zipcodewilmington.froilansfarm.People.Pilot;
 import com.zipcodewilmington.froilansfarm.Vehicles.CropDuster;
@@ -66,7 +70,36 @@ public class GeneralTests {
     }
     @Test
     public void testRideHorses(){
+        for(int i = 0; i < stable1.stableSize();i++){
+            froilan.mount(stable1.getHorses().get(i));
+            froilan.dismount(stable1.getHorses().get(i));
+            assertTrue(stable1.getHorses().get(i) instanceof Rideable);
+        }
+        assertTrue(froilan instanceof Rider);
+    }
+    @Test
+    public void testEater(){
+        assertTrue(froilan instanceof Eater);
+    }
 
+    @Test
+    public void testFeedHorses() {
+        EarOfCorn earOfCorn = new EarOfCorn();
+        for (int i = 0; i < stable1.stableSize(); i++) {
+            assertTrue(froilan.feed(3, earOfCorn));
+        }
+    }
+    @Test
+    public void testBreakfastFroilanda(){
+        String expected = "I'm Froilanda and I'm eatttttting";
+        String actual = froilanda.eat();
+        assertEquals(expected,actual);
+    }
+    @Test
+    public void testBreakfastFroilan(){
+        String expected = "Nom nom nom";
+        String actual = froilan.eat();
+        assertEquals(expected,actual);
     }
 
 }

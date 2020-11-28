@@ -2,5 +2,5 @@ package com.zipcodewilmington.froilansfarm.Interfaces;
 
 public interface NoiseMaker {
 
-    public void makeNoise();
+    public String makeNoise();
 }

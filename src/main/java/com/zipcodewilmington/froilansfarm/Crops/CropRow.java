@@ -15,6 +15,7 @@ public class CropRow {
     public void setCrops(ArrayList<Crop> crops) {
         this.crops = crops;
     }
+
     public void addCrop(Crop crop){
         crops.add(crop);
         }

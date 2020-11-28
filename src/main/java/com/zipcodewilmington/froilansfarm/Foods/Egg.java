@@ -2,12 +2,6 @@ package com.zipcodewilmington.froilansfarm.Foods;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
-public class Egg implements Edible {
-    public void hasBeenFertilized() {
+public class Egg extends Food implements Edible {
 
-    }
-
-    public void hasBeenHarvested() {
-
-    }
 }

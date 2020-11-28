@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.People;
 
-import com.zipcodewilmington.froilansfarm.Crops.Crop;
 import com.zipcodewilmington.froilansfarm.Interfaces.*;
 
 public class Farmer extends Person implements Botanist {
@@ -9,7 +8,8 @@ public class Farmer extends Person implements Botanist {
         super(name);
     }
 
-    public void plant() {
+    public boolean plant() {
+        return true;
 
     }
     public String getName() {

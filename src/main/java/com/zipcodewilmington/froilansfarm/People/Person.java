@@ -16,6 +16,7 @@ public abstract class Person implements Eater, Rider {
     public String eat() {
         return "Nom nom nom";
     }
+
     public void mount() {
 
     }
